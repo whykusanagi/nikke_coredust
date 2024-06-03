@@ -4,6 +4,10 @@ While the exact core dust gain might vary between players, the chart generated b
 
 The data is sourced from Reddit, Nikke Discord, & my personal outpost levels.
 
+![Core Dust & Outpost Levels](core_dust_chart.png)
+
+- **Nikke Reddit**: [https://www.reddit.com/r/NikkeMobile/comments/1bh4n2v/about_core_dust/](https://www.reddit.com/r/NikkeMobile/comments/1bh4n2v/about_core_dust/)
+- 
 **Creating a Bar Chart in Python with Plotly**
 
 This code snippet utilizes the Plotly library in Python to create a bar chart visualizing the relationship between "outpost level" and "core dust".

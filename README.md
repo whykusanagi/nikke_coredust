@@ -13,6 +13,8 @@
 
 This Python project analyzes core dust production across different outpost levels in NIKKE to identify optimal breakpoints—specific levels where core dust production increases significantly. **The breakpoint is the level where you CROSS the threshold and gain the benefit**—you profit when you reach that level, not before. By focusing on reaching these breakpoint levels, players can optimize their resource acquisition and character development.
 
+**How Outpost Leveling Works:** You gain one outpost level per stage cleared in campaign (both normal and hard mode). This means every stage you push directly contributes to your outpost level, making breakpoint planning crucial for efficient progression.
+
 The project provides both a modular Python library and a Jupyter notebook interface for generating interactive Plotly visualizations.
 
 ## Features
@@ -23,6 +25,8 @@ The project provides both a modular Python library and a Jupyter notebook interf
 - **Unit Tested**: Comprehensive test coverage for reliability
 - **Easy to Use**: Jupyter notebook format with step-by-step code
 - **Exportable Results**: Generate HTML charts for sharing or documentation
+- **Campaign Progression Planning**: Calculate how many stages to push for next breakpoint
+- **Competitive Advantage Analysis**: Understand resource accumulation over time
 
 ## Architecture
 
@@ -53,6 +57,25 @@ graph TD
 - **`PlotlyGen.ipynb`**: Jupyter notebook using the module for interactive analysis
 
 - **`tests/`**: Unit tests ensuring data validation and chart generation correctness
+
+## Why Breakpoints Matter
+
+### Campaign Progression
+
+When you're pushing hard campaign or normal campaign, each stage cleared gives you one outpost level. Reaching a breakpoint means more core dust per hour, which directly helps you:
+
+- **Level faster**: More core dust per hour accelerates your character leveling
+- **Beat difficult stages**: Some stages aren't beatable until you level up your characters—reaching breakpoints gives you the resources to level and overcome these walls
+- **Plan your campaign pushes**: Know exactly which stages to push for to reach the next breakpoint
+- **Optimize progression timing**: Time your campaign pushes to coincide with breakpoint levels for maximum efficiency
+
+### Competitive Advantage
+
+If you're competing with other players (rankings, guilds, etc.), having more resources per hour gives you a significant advantage:
+
+- **Out-level competitors**: Given enough time, more core dust per hour means you'll out-level players who haven't optimized their breakpoints
+- **Sustained resource advantage**: The hourly production difference compounds over days and weeks
+- **Faster character development**: More resources = faster upgrades = stronger teams = better competitive performance
 
 ## Quick Start
 
@@ -198,11 +221,29 @@ tests/test_core_dust_chart.py::test_generate_chart_custom_title PASSED
 
 ## Key Findings
 
-- **Breakpoints exist** at specific outpost levels (117, 126, 135, 145, 155, etc.)
+- **41 breakpoints identified** across 400 outpost levels (10.3% of levels)
 - **The breakpoint is the level where you CROSS the threshold and gain the benefit**—you profit when you reach that level, not before
-- **Production jumps** are significant when you reach these breakpoint levels
+- **Production jumps** are significant when you reach these breakpoint levels (often 1+ core dust per hour increase)
 - **Strategic leveling** should focus on reaching breakpoint levels to maximize resource gains
-- **Visualization** makes it easy to plan progression and identify which levels to target
+
+### Practical Implications
+
+**Campaign Progression:**
+- You gain one outpost level per stage cleared in campaign (normal and hard mode)
+- Reaching a breakpoint means more core dust per hour, which helps you level characters faster
+- Some stages aren't beatable until you level up—the extra core dust from breakpoints gives you the resources to overcome these progression walls
+- Plan your campaign pushes to target breakpoint levels for maximum efficiency
+
+**Competitive Advantage:**
+- If you're competing with other players (rankings, guilds, etc.), having more resources per hour gives you a significant advantage
+- Given enough time, more core dust per hour means you'll out-level players who haven't optimized their breakpoints
+- The hourly production difference compounds over days and weeks
+- More resources = faster character development = stronger teams = better competitive performance
+
+**Strategic Planning:**
+- Calculate how many campaign stages you need to push to reach the next breakpoint
+- Use the breakpoint data to plan your progression timing
+- Focus on the 41 breakpoint levels that actually matter instead of grinding randomly
 
 ## Data Sources
 

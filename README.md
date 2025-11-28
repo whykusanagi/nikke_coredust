@@ -13,7 +13,7 @@
 
 This Python project analyzes core dust production across different outpost levels in NIKKE to identify optimal breakpoints—specific levels where core dust production increases significantly. **The breakpoint is the level where you CROSS the threshold and gain the benefit**—you profit when you reach that level, not before. By focusing on reaching these breakpoint levels, players can optimize their resource acquisition and character development.
 
-**How Outpost Leveling Works:** You gain one outpost level per stage cleared in campaign (both normal and hard mode). This means every stage you push directly contributes to your outpost level, making breakpoint planning crucial for efficient progression.
+**How Outpost Leveling Works:** You gain one outpost level automatically per stage cleared in campaign (both normal and hard mode). You can't choose to level your outpost—it happens automatically as you progress through stages. The strategic decision is about **when to push campaign stages harder**—if you're close to a breakpoint, push to clear more stages and reach that breakpoint level. You don't want to leave extra resources on the table by stopping just before a breakpoint.
 
 The project provides both a modular Python library and a Jupyter notebook interface for generating interactive Plotly visualizations.
 
@@ -62,12 +62,12 @@ graph TD
 
 ### Campaign Progression
 
-When you're pushing hard campaign or normal campaign, each stage cleared gives you one outpost level. Reaching a breakpoint means more core dust per hour, which directly helps you:
+When you're pushing hard campaign or normal campaign, each stage cleared automatically gives you one outpost level. The strategic decision is about **when to push harder**—if you're close to a breakpoint, push to clear more stages and reach that breakpoint level. Reaching a breakpoint means more core dust per hour, which directly helps you:
 
 - **Level faster**: More core dust per hour accelerates your character leveling
 - **Beat difficult stages**: Some stages aren't beatable until you level up your characters—reaching breakpoints gives you the resources to level and overcome these walls
-- **Plan your campaign pushes**: Know exactly which stages to push for to reach the next breakpoint
-- **Optimize progression timing**: Time your campaign pushes to coincide with breakpoint levels for maximum efficiency
+- **Know when to push harder**: If you're just a few stages away from a breakpoint, push to clear those stages rather than stopping
+- **Don't leave resources on the table**: Stopping just before a breakpoint means missing out on the production increase—push to reach it
 
 ### Competitive Advantage
 
@@ -229,10 +229,12 @@ tests/test_core_dust_chart.py::test_generate_chart_custom_title PASSED
 ### Practical Implications
 
 **Campaign Progression:**
-- You gain one outpost level per stage cleared in campaign (normal and hard mode)
+- You gain one outpost level automatically per stage cleared in campaign (normal and hard mode)
+- You can't choose when to level your outpost—it happens automatically as you clear stages
+- The strategic decision is about **when to push campaign stages harder**—if you're close to a breakpoint, push to clear more stages
 - Reaching a breakpoint means more core dust per hour, which helps you level characters faster
 - Some stages aren't beatable until you level up—the extra core dust from breakpoints gives you the resources to overcome these progression walls
-- Plan your campaign pushes to target breakpoint levels for maximum efficiency
+- Don't leave resources on the table: if you're just a few stages away from a breakpoint, push to reach it
 
 **Competitive Advantage:**
 - If you're competing with other players (rankings, guilds, etc.), having more resources per hour gives you a significant advantage
@@ -241,9 +243,11 @@ tests/test_core_dust_chart.py::test_generate_chart_custom_title PASSED
 - More resources = faster character development = stronger teams = better competitive performance
 
 **Strategic Planning:**
-- Calculate how many campaign stages you need to push to reach the next breakpoint
-- Use the breakpoint data to plan your progression timing
-- Focus on the 41 breakpoint levels that actually matter instead of grinding randomly
+- Check your current outpost level and find the next breakpoint above it
+- Calculate how many campaign stages you need to clear to reach the next breakpoint
+- If you're close (within a few stages), push harder to clear those stages and reach the breakpoint
+- Use the breakpoint data to know when you should push harder vs. when you can take a break
+- Focus on the 41 breakpoint levels that actually matter—push harder when close to them
 
 ## Data Sources
 
